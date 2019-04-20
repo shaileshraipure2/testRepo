@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-console-app1",
+  "version": "0.0.0",
+  "description": "NodejsConsoleApp1",
+  "main": "app.js",
+  "author": {
+    "name": "shailesh.raipure"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "joi": "^14.3.1",
+    "nodemon": "^1.18.11",
+    "pug": "^2.0.3",
+    "request": "^2.88.0",
+    "yargs": "^13.2.2"
+  }
+}
