@@ -23,6 +23,7 @@
 //    console.log('Server is up!!');
 //})
 
+console.log('test');
 var express = require('express');
 var path = require('path');
 var hbs = require('hbs');
@@ -37,12 +38,14 @@ app.set('view engine', 'hbs');
 //app.set('views', viewPath);
 hbs.registerPartials(partialPath);
 
+console.log('test');
 const port = process.env.PORT || 3000;
+
 app.get('', (req, res) => {
-    res.render('Index2', {title:'My title 2'})
+    res.render('index2', {title:'My title 2'})
 })
 app.get('/index2', (re, res) => {
-    res.render('Index2', { title: 'my titl',footer:'my foooteerrrrrr' });
+    res.render('index2', { title: 'my titl',footer:'my foooteerrrrrr' });
 })
 app.listen(port, () => {
     console.log('server is up!!');
