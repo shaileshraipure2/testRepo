@@ -29,22 +29,21 @@ var hbs = require('hbs');
 var app = express();
 
 var folderPath = path.join(__dirname, 'views')
-var viewPath = path.join(__dirname, 'Other');
+//var viewPath = path.join(__dirname, 'Other');
 var partialPath = path.join(__dirname, 'Partial');
 app.use(express.static(folderPath));
 
 app.set('view engine', 'hbs');
-app.set('views', viewPath);
+//app.set('views', viewPath);
 hbs.registerPartials(partialPath);
 
-
+const port = process.env.PORT || 3000;
 app.get('', (req, res) => {
     res.render('Index2', {title:'My title 2'})
 })
 app.get('/index2', (re, res) => {
     res.render('Index2', { title: 'my titl',footer:'my foooteerrrrrr' });
 })
-app.listen(3000, () => {
-
+app.listen(port, () => {
     console.log('server is up!!');
 })
